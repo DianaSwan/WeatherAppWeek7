@@ -19,20 +19,29 @@ function getWeatherData(city) {
   let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
 
   fetch(apiUrl)
-    .then((response) => response.json())
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+      return response.json();
+    })
     .then((data) => {
-      let currentCityElement = document.querySelector("#current-city");
-      currentCityElement.textContent = data.city;
+      if (data && data.temperature && data.temperature.current) {
+        let currentCityElement = document.querySelector("#current-city");
+        currentCityElement.textContent = data.city;
 
-      let currentTemperatureElement = document.querySelector(
-        ".current-temperature-value"
-      );
-      currentTemperatureElement.textContent = Math.round(
-        data.temperature.current
-      );
+        let currentTemperatureElement = document.querySelector(
+          ".current-temperature-value"
+        );
+        currentTemperatureElement.textContent = Math.round(
+          data.temperature.current
+        );
 
-      let currentDetailsElement = document.querySelector(".current-details");
-      currentDetailsElement.innerHTML = `${data.condition.description} <br /> Humidity: <strong>${data.temperature.humidity}%</strong>, Wind: <strong>${data.wind.speed} km/h</strong>`;
+        let currentDetailsElement = document.querySelector(".current-details");
+        currentDetailsElement.innerHTML = `${data.condition.description} <br /> Humidity: <strong>${data.temperature.humidity}%</strong>, Wind: <strong>${data.wind.speed} km/h</strong>`;
+      } else {
+        console.log("Temperature data not available");
+      }
     })
     .catch((error) => {
       console.log("Error fetching weather data:", error);
