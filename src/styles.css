@@ -137,4 +137,10 @@ body {
   border-radius: 5px;
   margin-left: 5px;
   font-size: 16px;
+  color: white;
+}
+main {
+  border-bottom: 1px solid #c3bef0;
+  padding: 15px;
+  border-top: 1px solid #c3bef0;
 }
