@@ -168,21 +168,21 @@ main {
   justify-content: space-between;
 }
 
-.weather-app-temperature-container {
+.current-weather-container {
   display: flex;
 }
 
-.weather-app-temperature {
+.current-temperature {
   font-size: 70px;
   font-weight: bold;
 }
 
-.weather-app-icon {
+.current-temperature-icon {
   font-size: 39px;
   margin-top: 22px;
   margin-left: 10px;
 }
-.weather-app-unit {
+.current-temperature {
   margin-top: 30px;
   font-size: 20px;
 }
