@@ -171,6 +171,21 @@ main {
 .weather-app-temperature-container {
   display: flex;
 }
+
+.weather-app-temperature {
+  font-size: 70px;
+  font-weight: bold;
+}
+
+.weather-app-icon {
+  font-size: 43px;
+  margin-top: 22px;
+  margin-left: 10px;
+}
+.weather-app-unit {
+  margin-top: 30px;
+  font-size: 20px;
+}
 footer {
   text-align: center;
   font-size: 13px;
