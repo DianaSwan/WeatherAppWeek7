@@ -1,5 +1,22 @@
-function handleSearchSubmit(event) {
+function displayCurrentDateTime() {
+  let now = new Date();
+  let options = {
+    weekday: "long",
+    hour: "2-digit",
+    minute: "2-digit",
+    hour12: false,
+  };
+  let formattedDateTime = now
+    .toLocaleDateString("en-US", options)
+    .replace(",", "");
+
+  let currentDetailsElement = document.querySelector(".current-details");
+  currentDetailsElement.innerHTML = `${formattedDateTime}, moderate rain <br /> Humidity: <strong>87%</strong>, Wind: <strong>7.2km/h</strong>`;
+}
+
+function searchCity(event) {
   event.preventDefault();
+
   let searchInputElement = document.querySelector("#search-input");
   let city = searchInputElement.value.trim();
 
@@ -21,3 +38,21 @@ let day = currentTime.getDay();
 if (minutes < 10) {
   minutes = `0${minutes}`;
 }
+
+if (hours < 10) {
+  hours = `0${hours}`;
+}
+
+let days = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
+
+let formattedDay = days[day];
+
+currentDate.innerHTML = `${formattedDay} ${hours}:${minutes}`;
