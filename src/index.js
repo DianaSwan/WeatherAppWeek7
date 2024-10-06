@@ -1,9 +1,23 @@
 function handleSearchSubmit(event) {
   event.preventDefault();
-  let searchInput = document.querySelector("#search-form-input");
-  let cityElement = document.querySelector("#city");
-  cityElement.innerHTML = searchInput.value;
+  let searchInputElement = document.querySelector("#search-input");
+  let city = searchInputElement.value.trim();
+
+  if (city) {
+    let currentCityElement = document.querySelector("#current-city");
+    currentCityElement.textContent = city;
+  }
 }
 
-let citySearchFormElement = document.querySelector("#city-Search-Form");
-citySearchFormElement.addEventListener("submit", handleSearchSubmit);
+let searchform = document.querySelector("form");
+searchform.addEventListener("submit", searchCity);
+
+let currentDate = document.querySelector("#current-date");
+let currentTime = new Date();
+let minutes = currentTime.getMinutes();
+let hours = currentTime.getHours();
+let day = currentTime.getDay();
+
+if (minutes < 10) {
+  minutes = `0${minutes}`;
+}
