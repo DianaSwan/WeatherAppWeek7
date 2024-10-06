@@ -154,7 +154,7 @@ main {
 }
 
 .weather-app-details {
-  font-size: 20px;
+  font-size: 18px;
   color: grey;
   line-height: 20px;
   font-weight: 300;
@@ -178,7 +178,7 @@ main {
 }
 
 .weather-app-icon {
-  font-size: 43px;
+  font-size: 39px;
   margin-top: 22px;
   margin-left: 10px;
 }
