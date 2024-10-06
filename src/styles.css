@@ -61,12 +61,13 @@ main {
 
 .current-temperature-icon {
   font-size: 39px;
-  margin-top: 16px;
+  margin-top: 10px;
   margin-left: 10px;
 }
 
 .current-temperature-unit {
   font-size: 30px;
+  margin-top: 6px;
 }
 footer {
   text-align: center;
