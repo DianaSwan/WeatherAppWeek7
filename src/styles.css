@@ -149,14 +149,28 @@ main {
 
 .weather-app-city {
   margin: 0;
-  font-size: 32px;
+  font-size: 35px;
   line-height: 42px;
 }
+
+.weather-app-details {
+  font-size: 20px;
+  color: grey;
+  line-height: 20px;
+  font-weight: 300;
+}
+.weather-app-details strong {
+  color: #c3bef0;
+}
+
 .weather-app-data {
   display: flex;
   justify-content: space-between;
 }
 
+.weather-app-temperature-container {
+  display: flex;
+}
 footer {
   text-align: center;
   font-size: 13px;
