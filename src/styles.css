@@ -145,3 +145,12 @@ main {
   border-top: 1px solid #c3bef0;
   padding: 15px;
 }
+
+footer {
+  text-align: center;
+  font-size: 13px;
+}
+
+a {
+  color: #c3bef0;
+}
