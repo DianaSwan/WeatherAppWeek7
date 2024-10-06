@@ -3,114 +3,6 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-.poppins-thin {
-  font-family: "Poppins", sans-serif;
-  font-weight: 100;
-  font-style: normal;
-}
-
-.poppins-extralight {
-  font-family: "Poppins", sans-serif;
-  font-weight: 200;
-  font-style: normal;
-}
-
-.poppins-light {
-  font-family: "Poppins", sans-serif;
-  font-weight: 300;
-  font-style: normal;
-}
-
-.poppins-regular {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.poppins-medium {
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-}
-
-.poppins-semibold {
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  font-style: normal;
-}
-
-.poppins-bold {
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-}
-
-.poppins-extrabold {
-  font-family: "Poppins", sans-serif;
-  font-weight: 800;
-  font-style: normal;
-}
-
-.poppins-black {
-  font-family: "Poppins", sans-serif;
-  font-weight: 900;
-  font-style: normal;
-}
-
-.poppins-thin-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 100;
-  font-style: italic;
-}
-
-.poppins-extralight-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 200;
-  font-style: italic;
-}
-
-.poppins-light-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 300;
-  font-style: italic;
-}
-
-.poppins-regular-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  font-style: italic;
-}
-
-.poppins-medium-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-style: italic;
-}
-
-.poppins-semibold-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  font-style: italic;
-}
-
-.poppins-bold-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  font-style: italic;
-}
-
-.poppins-extrabold-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 800;
-  font-style: italic;
-}
-
-.poppins-black-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 900;
-  font-style: italic;
-}
-
 .weather-app {
   background: white;
   max-width: 600px;
@@ -139,37 +31,27 @@ body {
   font-size: 16px;
   color: white;
 }
-main {
-  border-bottom: 1px solid #c3bef0;
-  padding: 15px;
-}
+
 main {
   padding: 30px;
 }
 
-.weather-app-city {
+.current-weather {
+  display: flex;
+  justify-content: space-between;
+}
+
+.current-city {
   margin: 0;
   font-size: 35px;
   line-height: 42px;
 }
 
-.weather-app-details {
+.current-details {
   font-size: 18px;
   color: grey;
   line-height: 20px;
   font-weight: 300;
-}
-.weather-app-details strong {
-  color: #c3bef0;
-}
-
-.weather-app-data {
-  display: flex;
-  justify-content: space-between;
-}
-
-.current-weather-container {
-  display: flex;
 }
 
 .current-temperature {
@@ -182,10 +64,7 @@ main {
   margin-top: 22px;
   margin-left: 10px;
 }
-.current-temperature {
-  margin-top: 30px;
-  font-size: 20px;
-}
+
 footer {
   text-align: center;
   font-size: 13px;

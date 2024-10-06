@@ -10,8 +10,8 @@ function displayCurrentDateTime() {
     .toLocaleDateString("en-US", options)
     .replace(",", "");
 
-  let currentDetailsElement = document.querySelector(".current-details");
-  currentDetailsElement.innerHTML = `${formattedDateTime}, moderate rain <br /> Humidity: <strong>87%</strong>, Wind: <strong>7.2km/h</strong>`;
+  let currentDetailsElement = document.querySelector("#current-details");
+  currentDetailsElement.innerHTML = `${formattedDateTime}, moderate rain <br /> Humidity: <strong>87%</strong>, Wind: <strong>7.2 km/h</strong>`;
 }
 
 function searchCity(event) {
@@ -25,9 +25,8 @@ function searchCity(event) {
     currentCityElement.textContent = city;
   }
 }
-
-let searchform = document.querySelector("form");
-searchform.addEventListener("submit", searchCity);
+let searchForm = document.querySelector("#city-search-form");
+searchForm.addEventListener("submit", searchCity);
 
 let currentDate = document.querySelector("#current-date");
 let currentTime = new Date();
@@ -38,7 +37,6 @@ let day = currentTime.getDay();
 if (minutes < 10) {
   minutes = `0${minutes}`;
 }
-
 if (hours < 10) {
   hours = `0${hours}`;
 }
@@ -52,7 +50,8 @@ let days = [
   "Friday",
   "Saturday",
 ];
-
 let formattedDay = days[day];
 
 currentDate.innerHTML = `${formattedDay} ${hours}:${minutes}`;
+
+displayCurrentDateTime();
