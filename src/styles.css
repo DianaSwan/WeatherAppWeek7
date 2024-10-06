@@ -142,8 +142,10 @@ body {
 main {
   border-bottom: 1px solid #c3bef0;
   padding: 15px;
-  border-top: 1px solid #c3bef0;
-  padding: 15px;
+}
+.weather-app-data {
+  display: flex;
+  justify-content: space-between;
 }
 
 footer {
