@@ -43,12 +43,12 @@ main {
 
 .current-city {
   margin: 0;
-  font-size: 35px;
+  font-size: 40px;
   line-height: 42px;
 }
 
 .current-details {
-  font-size: 18px;
+  font-size: 16px;
   color: grey;
   line-height: 20px;
   font-weight: 300;
