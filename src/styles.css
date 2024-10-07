@@ -43,12 +43,12 @@ main {
 
 .current-city {
   margin: 0;
-  font-size: 40px;
+  font-size: 35px;
   line-height: 42px;
 }
 
 .current-details {
-  font-size: 16px;
+  font-size: 18px;
   color: grey;
   line-height: 20px;
   font-weight: 300;
@@ -58,29 +58,26 @@ main {
   font-size: 70px;
   font-weight: bold;
   display: flex;
-  align-items: flex-start;
+  align-items: baseline;
 }
 
 .current-temperature-icon {
-  display: flex;
-  align-items: flex-start;
-  margin-right: 5px;
-}
-.current-temperature-icon img {
-  width: 30px;
-  height: auto;
+  font-size: 1rem;
+  margin-left: 10px;
+  margin-bottom: 5px;
+  vertical-align: top;
 }
 
 .current-temperature-unit {
   font-size: 20px;
-  margin-left: 10px;
-  margin-top: 27px;
-  vertical-align: super;
+  margin-left: 5px;
+  margin-bottom: 5px;
+  vertical-align: top;
 }
 
 footer {
   text-align: center;
-  font-size: 10px;
+  font-size: 13px;
 }
 
 a {
