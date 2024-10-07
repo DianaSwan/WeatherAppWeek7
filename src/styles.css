@@ -64,14 +64,14 @@ main {
 .current-temperature-icon {
   font-size: 1rem;
   margin-left: 10px;
-  margin-bottom: 5px;
+  margin-top: 15px;
   vertical-align: top;
 }
 
 .current-temperature-unit {
   font-size: 20px;
   margin-left: 5px;
-  margin-bottom: 5px;
+  margin-top: 15px;
   vertical-align: top;
 }
 
