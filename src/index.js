@@ -1,12 +1,15 @@
-function displayCurrentDateTime() {
+function displayCurrentDateTime(timezoneoffset) {
   let now = new Date();
+  let localTime = new Date(now.getTime() + timezoneOffset * 1000);
+
   let options = {
     weekday: "long",
     hour: "2-digit",
     minute: "2-digit",
     hour12: false,
   };
-  let formattedDateTime = now
+
+  let formattedDateTime = localTime
     .toLocaleDateString("en-US", options)
     .replace(",", "");
 
@@ -39,6 +42,8 @@ function getWeatherData(city) {
 
         let currentDetailsElement = document.querySelector(".current-details");
         currentDetailsElement.innerHTML = `${data.condition.description} <br /> Humidity: <strong>${data.temperature.humidity}%</strong>, Wind: <strong>${data.wind.speed} km/h</strong>`;
+
+        displayCurrentDateTime(data.timezone.offset);
       } else {
         console.log("Temperature data not available");
       }
@@ -61,6 +66,8 @@ function searchCity(event) {
 
 let searchForm = document.querySelector("#city-search-form");
 searchForm.addEventListener("submit", searchCity);
+
+searchCity(new Event("submit"));
 
 let currentDate = document.querySelector("#current-date");
 let currentTime = new Date();
