@@ -62,7 +62,9 @@ main {
 }
 
 .current-temperature-icon {
-  font-size: 1rem;
+  display: flex;
+  align-items: flex-start;
+  margin-right: 5px;
 }
 .current-temperature-icon img {
   width: 30px;
