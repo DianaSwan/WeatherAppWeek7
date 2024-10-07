@@ -20,7 +20,7 @@ function displayCurrentDateTime(timezoneoffset) {
 
 function getWeatherData(city) {
   let apiKey = "24a843192c3oc0c5tab227801f7a3edf";
-  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?lon={lon}&lat={lat}&key={key}`;
 
   fetch(apiUrl)
     .then((response) => {
