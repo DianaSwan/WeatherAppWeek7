@@ -63,11 +63,9 @@ main {
 
 .current-temperature-icon {
   font-size: 1rem;
-  margin-top: 27px;
-  margin-left: 10px;
 }
 .current-temperature-icon img {
-  width: 50px;
+  width: 30px;
   height: auto;
 }
 
