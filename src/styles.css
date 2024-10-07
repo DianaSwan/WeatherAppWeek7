@@ -66,6 +66,10 @@ main {
   margin-top: 27px;
   margin-left: 10px;
 }
+.current-temperature-icon img {
+  width: 50px;
+  height: auto;
+}
 
 .current-temperature-unit {
   font-size: 20px;
