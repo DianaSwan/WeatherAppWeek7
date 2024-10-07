@@ -20,7 +20,6 @@ function displayCurrentDateTime(timezoneOffset) {
 function getWeatherData(city) {
   let apiKey = "24a843192c3oc0c5tab227801f7a3edf";
 
-  // Use correct geocoding API to get coordinates
   let geocodingApiUrl = `https://api.shecodes.io/weather/v1/geocode?query=${city}&key=${apiKey}`;
 
   fetch(geocodingApiUrl)
@@ -35,7 +34,6 @@ function getWeatherData(city) {
         let lat = data[0].latitude;
         let lon = data[0].longitude;
 
-        // Use actual coordinates in the weather API URL
         let weatherApiURL = `https://api.shecodes.io/weather/v1/current?lat=${lat}&lon=${lon}&key=${apiKey}`;
         return fetch(weatherApiURL);
       } else {
@@ -63,7 +61,6 @@ function getWeatherData(city) {
         let currentDetailsElement = document.querySelector(".current-details");
         currentDetailsElement.innerHTML = `${data.condition.description} <br /> Humidity: <strong>${data.temperature.humidity}%</strong>, Wind: <strong>${data.wind.speed} km/h</strong>`;
 
-        // Call to display the date and time for the searched city
         displayCurrentDateTime(data.timezone.offset);
       } else {
         console.log("Temperature data not available");
@@ -84,6 +81,10 @@ function searchCity(event) {
     getWeatherData(city);
   }
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  getWeatherData("Nairobi");
+});
 
 let searchForm = document.querySelector("#city-search-form");
 searchForm.addEventListener("submit", searchCity);
