@@ -65,7 +65,6 @@ main {
   font-size: 1rem;
   margin-bottom: 10px;
   margin-left: 10px;
-  vertical-align: super;
 }
 
 .current-temperature-unit {
@@ -77,7 +76,7 @@ main {
 
 footer {
   text-align: center;
-  font-size: 13px;
+  font-size: 10px;
 }
 
 a {
