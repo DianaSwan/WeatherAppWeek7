@@ -58,7 +58,7 @@ main {
   font-size: 70px;
   font-weight: bold;
   display: flex;
-  align-items: baseline;
+  align-items: flex-start;
 }
 
 .current-temperature-icon {
