@@ -1,5 +1,6 @@
 function displayCurrentDateTime(timezoneoffset) {
   let now = new Date();
+
   let localTime = new Date(now.getTime() + timezoneOffset * 1000);
 
   let options = {
@@ -13,8 +14,8 @@ function displayCurrentDateTime(timezoneoffset) {
     .toLocaleDateString("en-US", options)
     .replace(",", "");
 
-  let currentDetailsElement = document.querySelector("#current-details");
-  currentDetailsElement.innerHTML = `${formattedDateTime}, moderate rain <br /> Humidity: <strong>87%</strong>, Wind: <strong>7.2 km/h</strong>`;
+  let currentDateElement = document.querySelector("#current-date");
+  currentDateElement.textContent = formattedDateTime;
 }
 
 function getWeatherData(city) {
@@ -67,32 +68,13 @@ function searchCity(event) {
 let searchForm = document.querySelector("#city-search-form");
 searchForm.addEventListener("submit", searchCity);
 
-searchCity(new Event("submit"));
-
 let currentDate = document.querySelector("#current-date");
-let currentTime = new Date();
-let minutes = currentTime.getMinutes();
-let hours = currentTime.getHours();
-let day = currentTime.getDay();
+let now = new Date();
+let formattedNow = now.toLocaleDateString("en-US", {
+  weekday: "long",
+  hour: "2-digit",
+  minute: "2-digit",
+  hour12: false,
+});
 
-if (minutes < 10) {
-  minutes = `0${minutes}`;
-}
-if (hours < 10) {
-  hours = `0${hours}`;
-}
-
-let days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
-let formattedDay = days[day];
-
-currentDate.innerHTML = `${formattedDay} ${hours}:${minutes}`;
-
-displayCurrentDateTime();
+currentDate.textContent = formattedNow;
